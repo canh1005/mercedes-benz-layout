@@ -1,0 +1,16 @@
+.search__box{
+    background-color: $color-gray-3;
+    padding: $pd-3;
+    .search-box__form{
+        background-color: $color-white;
+        .search-box__input{
+            border: none;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        button{
+            background-color: transparent;
+        }
+    }
+}

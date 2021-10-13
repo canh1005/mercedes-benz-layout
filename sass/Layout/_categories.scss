@@ -1,0 +1,35 @@
+.categories{
+    // background-color: $color-black;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    z-index: 99;
+    transform: translateX(210px);
+    .categories__content{
+        width: 250px;
+        .categories__list{
+            padding: 0;
+        }
+        .categories__items{
+            background-color: $color-black;
+            margin: $mg-0 - 3 0;
+            transition: all .5s;
+            &:hover{
+                transform: translateX(-210px);
+            }
+            .icon{
+                @include Text($color-white,$fs-5,900);
+                padding: $pd-1;
+            }
+            .text{
+                @include Text($color-white,$fs-3,unset);
+            }
+            .link{
+                @include Text($color-white,$fs-5,900);
+                i{
+                    padding: 0 $pd-1;
+                }
+            }
+        }
+    }
+}

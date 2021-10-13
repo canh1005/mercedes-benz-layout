@@ -1,0 +1,149 @@
+.footer{
+    background-color: $color-black;
+    padding-top: $pd-6;
+    .footer__content{
+        width: calc(100% - 60px);
+        margin: auto;
+        .footer__brand{
+            border-top: 1px solid $color-gray-4;
+            .brand-footer__list{
+                padding: $pd-6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                li{
+                    margin: $mg-6;
+                    a{
+                        width: 100%;
+                        img{
+                            display: block;
+                            height: 2em;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__description{
+            @include Text($color-gray-4,$fs-2,unset);
+            border-top: 1px solid $color-gray-4;
+            p{
+                padding-top: $pd-6;
+            }
+            a{
+                color: $color-white;
+                &:hover{
+                    color: $color-blue-0;
+                }
+            }
+        }
+    }
+    .footer__outer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .lang-link{
+            ul{
+                display: flex;
+                padding: 0;
+                li{
+                    padding: 0;
+                    a{
+                        @include Text($color-white,$fs-0,unset);
+                        &:hover{
+                            color: $color-blue-0;
+                        }
+                    }
+                    #deu{
+                        &::after{
+                            content: " ";
+                            height: 11px;
+                            width: 1px;
+                            display: inline-block;
+                            background-color: $color-white;
+                            margin:0 $mg-1;
+                        }
+                    }
+                }
+            }
+        }
+        .meta-footer{
+            display: flex;
+            .legal{
+                @include MetaFooterList();
+            }
+            .footer__navigation{
+                @include MetaFooterList();
+            }
+            .backtotop{
+                a{
+                    color: $color-gray-4;
+                    &:hover{
+                        color: $color-blue-0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767.98px) {
+    .footer__content{
+        .footer__brand{
+            .brand-footer__list{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media screen and (max-width:1077.98px) {
+    .footer__content{
+        .footer__outer{
+            .meta-footer__list{
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+@media screen and (max-width:1023.98px) {
+    .footer__content{
+        padding-bottom: $pd-6;
+        .footer__outer{
+            flex-direction: column;
+            position: relative;
+            align-items: flex-start;
+            .meta-footer__list{
+                align-items: flex-start;
+                .footer__navigation,.legal{
+                    ul{
+                        li{
+                            padding: 0;
+                            padding-right: $pd-2;
+                        }
+                    }
+                }
+            }
+            .meta-footer{
+                .backtotop{
+                    position: absolute;
+                    bottom: 1px;
+                    right: 0px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:497.98px) {
+    .footer__content{
+        .footer__outer{
+            align-items: center;
+            .footer__navigation,.legal{
+                ul{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

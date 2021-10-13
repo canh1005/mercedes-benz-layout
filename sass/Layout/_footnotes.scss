@@ -1,0 +1,15 @@
+.footnotes{
+    background-color: $color-black;
+    padding-top: $pd-4;
+    .footnotes__content{
+        @include Text($color-white,$fs-2,unset);
+        padding: $pd-3;
+        span{
+            margin-right: $mg-2;
+            white-space: nowrap;
+        }
+        div{
+            margin: $mg-3 0;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin Text($color,$font-size,$font-weigth) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weigth;
+}
+
+@mixin BannerBG($background){
+    background-image: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin MetaFooterList(){
+    ul{
+        display: flex;
+        padding: 0;
+        li{
+            padding: 0 $pd-2;
+            a{
+                @include Text($color-gray-4,$fs-2,unset);
+                &:hover{
+                    color: $color-blue-0;
+                }
+            }
+        }
+    }
+}

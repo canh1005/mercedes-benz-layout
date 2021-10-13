@@ -1,0 +1,26 @@
+.headlineandcopy{
+    background-color: $color-black;
+    padding: $pd-5 0;
+    .align-center{
+        margin: auto;
+        width: 50%;
+        @include Text($color-white,unset,unset);
+        text-align: center;
+        padding: $pd-5 0;
+        button{
+            color: $color-white;
+        }
+        a{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@media screen and (max-width:767.98px) {
+    .headlineandcopy{
+        .align-center{
+            width: calc(100% - 60px);
+        }
+    }
+}

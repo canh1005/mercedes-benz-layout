@@ -1,0 +1,28 @@
+.sitemap{
+    background-color: $color-black;
+    padding-top: $pd-4;
+    
+    .sitemap__content{
+        width: calc(100% - 60px);
+        margin: auto;
+        .sitemap__items{
+            padding: 0;
+            h2{
+                border-bottom: 1px solid $color-gray-4;
+                padding: 0;
+                padding-bottom: $pd-4;
+                @include Text($color-white,2rem,unset);
+            }
+            ul{
+                padding: 0;
+            }
+            a{
+                @include Text($color-gray-4,$fs-2,$fw-normal);
+                transition: all .5s;
+                &:hover{
+                    color: $color-blue-0;
+                }
+            }
+        }
+    }
+}

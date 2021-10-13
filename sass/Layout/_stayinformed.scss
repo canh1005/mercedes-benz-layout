@@ -1,0 +1,23 @@
+.stayinformed{
+    background-color: $color-black;
+    .stayinformed__content{
+        width: calc(100% - 60px);
+        margin: auto;
+        h2{
+            @include Text($color-white,2.4rem,$fw-normal);
+            border-bottom: 1px solid $color-gray-4;
+            padding-bottom: $pd-4;
+        }
+        .stayinformed__items{
+            @include Text($color-gray-4,$fs-2,unset);
+            a{
+                @include Text($color-gray-4,$fs-5 + 5px,unset);
+                margin: $mg-1 $mg-2 + 1;
+                transition: all .5s;
+                &:hover{
+                    color: $color-blue-0;
+                }
+            }
+        }
+    }
+}

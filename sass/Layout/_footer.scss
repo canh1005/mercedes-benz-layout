@@ -1,6 +1,6 @@
 .footer{
     background-color: $color-black;
-    padding-top: $pd-6;
+    padding: $pd-6 0;
     .footer__content{
         width: calc(100% - 60px);
         margin: auto;
@@ -70,6 +70,9 @@
         }
         .meta-footer{
             display: flex;
+            .meta-footer__list{
+                display: flex;
+            }
             .legal{
                 @include MetaFooterList();
             }

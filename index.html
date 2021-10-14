@@ -40,6 +40,11 @@
         rel="stylesheet"
         href="./css/owl.theme.default.min.css"
     >
+    <!-- Animation on Scroll -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
     <!-- Main CSS -->
     <link
         rel="stylesheet"
@@ -64,20 +69,25 @@
                         class="brand__text"
                     >Mercedes-Benz</a>
                 </div>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="toggler-icon"><i
-                            class="fas fa-align-justify"
-                            style="color: white;"
-                        ></i></span>
-                </button>
+                <div>
+                    <span class="search-mobi">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                    </span>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="toggler-icon"><i
+                                class="fas fa-align-justify"
+                                style="color: white;"
+                            ></i></span>
+                    </button>
+                </div>
                 <!-- Provider/Language -->
                 <div class="col header__meta">
                     <a
@@ -97,7 +107,7 @@
                     class="collapse navbar-collapse col header__main"
                     id="navbarNav"
                 >
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav navbar-nav-scroll">
                         <li class="nav-item">
                             <a
                                 class="nav-link active"
@@ -147,17 +157,27 @@
                                 href="#"
                             >Lifestyle</a>
                         </li>
-                        <li class="nav-item">
-                            <i class="fas fa-search"></i>
+                        <li class="nav-item search-desktop">
+                            <a
+                                href="#search__box"
+                                class="nav-link"
+                            >
+                                <i class="fas fa-search"></i> <span class="text__search-mobi">Search</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </section>
     <!-- Banner -->
     <section class="banner owl-carousel owl-theme">
         <div class="banner__item b0">
+            <img
+                src="./img/Banner/01-mercedes-benz-iaa-mobility-2021-3400x1440.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3>IAA MOBILITY 2021.</h3>
                 <a
@@ -170,6 +190,10 @@
             </div>
         </div>
         <div class="banner__item b1">
+            <img
+                src="./img/Banner/01-mercedes-eq-eqb-2021-x243-3400x1440.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3>The new EQB.</h3>
                 <a
@@ -182,6 +206,10 @@
             </div>
         </div>
         <div class="banner__item b2">
+            <img
+                src="./img/Banner/eqg-3400x1440.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3>The Concept EQG.</h3>
                 <a
@@ -194,6 +222,10 @@
             </div>
         </div>
         <div class="banner__item b3">
+            <img
+                src="./img/Banner/maybach-3400x1440.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3> The Concept Mercedes-Maybach EQS. </h3>
                 <a
@@ -206,6 +238,10 @@
             </div>
         </div>
         <div class="banner__item b4">
+            <img
+                src="./img/Banner/mercedes-benz-eqs-v297-homepage-3400x1440-03-2021.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3> The new EQS. This is for you, world. </h3>
                 <a
@@ -218,6 +254,10 @@
             </div>
         </div>
         <div class="banner__item b5">
+            <img
+                src="./img/Banner/mercedes-benz-the-all-electric-eqe-2021-v295-3400x1440.jpeg"
+                alt=""
+            >
             <div class="banner__container">
                 <h3> The EQE. </h3>
                 <a
@@ -243,7 +283,10 @@
         </div>
     </section>
     <!-- Search Box -->
-    <section class="search__box">
+    <section
+        class="search__box"
+        id="search__box"
+    >
         <div class="container">
             <form
                 action=""
@@ -265,7 +308,10 @@
     </section>
     <!-- Headline And Copy -->
     <section class="headlineandcopy">
-        <div class="container">
+        <div
+            class="container"
+            data-aos="fade-up"
+        >
             <div class="head-line-and-copy align-center">
                 <h2>Welcome to the Mercedes-Benz international website.</h2>
                 <p>Exclusive reports and current films: experience a broad range of topics from the fascinating world of
@@ -280,7 +326,10 @@
     </section>
     <!-- Channel -->
     <section class="channeltiles">
-        <ul class="channeltiles__list">
+        <ul
+            class="channeltiles__list"
+            data-aos="fade-up"
+        >
             <li class="channeltiles__item">
                 <a href="#">
                     <img
@@ -309,7 +358,10 @@
     </section>
     <!-- New, Popular and Video -->
     <section class="new-and-video">
-        <div class="new-and-video__content">
+        <div
+            class="new-and-video__content"
+            data-aos="fade-up"
+        >
             <nav>
                 <div
                     class="nav nav-tabs new-and-video__tab"
@@ -474,7 +526,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="items">
+                        <div class="items w-50-items">
                             <a href="#">
                                 <img
                                     src="./img/Vehicles/mercedes-benz-eqe-v295-teaser-3400x1912-08-2021.jpeg"
@@ -556,25 +608,30 @@
     </section>
     <!-- Footnotes -->
     <section class="footnotes">
-        <div class="footnotes__content">
+        <div
+            class="footnotes__content"
+            data-aos="fade-up"
+        >
             <div>
                 <span><i class="fas fa-gas-pump"></i> Kraftstoffverbrauch kombiniert</span>
                 <span><i class="fab fa-envira"></i> CO₂-Emissionen kombiniert</span>
                 <span><i class="fas fa-gas-pump"></i> Stromverbrauch im kombinierten Testzyklus</span>
             </div>
             <div>
-                <p> Die angegebenen Werte wurden nach dem vorgeschriebenen Messverfahren ermittelt. Es handelt sich um
+                <p>
+                    <sup>1</sup> Die angegebenen Werte wurden nach dem vorgeschriebenen Messverfahren ermittelt. Es handelt sich um
                     die „NEFZ-CO₂-Werte“ i. S. v. Art. 2 Nr. 1 Durchführungsverordnung (EU) 2017/1153. Die
                     Kraftstoffverbrauchswerte wurden auf Basis dieser Werte errechnet. Der Stromverbrauch wurde auf der
                     Grundlage der VO 692/2008/EG ermittelt. Weitere Informationen zum offiziellen Kraftstoffverbrauch
                     und den offiziellen spezifischen CO₂-Emissionen neuer Personenkraftwagen können dem „Leitfaden über
                     den Kraftstoffverbrauch, die CO₂-Emissionen und den Stromverbrauch aller neuen
                     Personenkraftwagenmodelle“ entnommen werden, der an allen Verkaufsstellen und bei der Deutschen
-                    Automobil Treuhand GmbH unter www.dat.de unentgeltlich erhältlich ist.</p>
+                    Automobil Treuhand GmbH unter www.dat.de unentgeltlich erhältlich ist.
+                </p>
             </div>
             <div>
                 <p>
-                    Angaben zu Kraftstoffverbrauch, Stromverbrauch und CO₂-Emissionen sind vorläufig und wurden vom
+                    <sup>4</sup> Angaben zu Kraftstoffverbrauch, Stromverbrauch und CO₂-Emissionen sind vorläufig und wurden vom
                     Technischen Dienst für das Zertifizierungsverfahren nach Maßgabe des WLTP-Prüfverfahrens ermittelt
                     und in NEFZ-Werte korreliert. Eine EG-Typgenehmigung und Konformitätsbescheinigung mit amtlichen
                     Werten liegen noch nicht vor. Abweichungen zwischen den Angaben und den amtlichen Werten sind
@@ -583,7 +640,7 @@
             </div>
             <div>
                 <p>
-                    Stromverbrauch und Reichweite wurden auf der Grundlage der VO 692/2008/EG ermittelt. Stromverbrauch
+                    <sup>6</sup> Stromverbrauch und Reichweite wurden auf der Grundlage der VO 692/2008/EG ermittelt. Stromverbrauch
                     und Reichweite sind abhängig von der Fahrzeugkonfiguration. Weitere Informationen zum offiziellen
                     Kraftstoffverbrauch und den offiziellen spezifischen CO₂-Emissionen neuer Personenkraftwagen können
                     dem „Leitfaden über den Kraftstoffverbrauch, die CO₂-Emissionen und den Stromverbrauch aller neuen
@@ -593,7 +650,7 @@
             </div>
             <div>
                 <p>
-                    Angaben zu Stromverbrauch und Reichweite sind vorläufig und wurden vom Technischen Dienst für das
+                    <sup>7</sup> Angaben zu Stromverbrauch und Reichweite sind vorläufig und wurden vom Technischen Dienst für das
                     Zertifizierungsverfahren nach Maßgabe der UN/ECE-Regelung Nr. 101 ermittelt. Die EG-Typgenehmigung
                     und eine Konformitätsbescheinigung mit amtlichen Werten liegen noch nicht vor. Abweichungen zwischen
                     den Angaben und den amtlichen Werten sind möglich.
@@ -601,7 +658,7 @@
             </div>
             <div>
                 <p>
-                    Alle technischen Angaben sind vorläufig und wurden intern nach Maßgabe der jeweils anwendbaren
+                    <sup>8</sup> Alle technischen Angaben sind vorläufig und wurden intern nach Maßgabe der jeweils anwendbaren
                     Zertifizierungsmethode ermittelt. Es liegen bislang weder bestätigte Werte vom TÜV noch eine
                     EG-Typgenehmigung noch eine Konformitätsbescheinigung mit amtlichen Werten vor. Abweichungen
                     zwischen den Angaben und den amtlichen Werten sind möglich.
@@ -611,7 +668,10 @@
     </section>
     <!-- Site map -->
     <section class="sitemap">
-        <div class="sitemap__content row">
+        <div
+            class="sitemap__content row"
+            data-aos="fade-up"
+        >
             <div class="sitemap__items col-12 col-lg-3">
                 <h2>More topics</h2>
                 <ul>
@@ -673,7 +733,10 @@
     </section>
     <!-- Stay informed -->
     <section class="stayinformed">
-        <div class="stayinformed__content">
+        <div
+            class="stayinformed__content"
+            data-aos="fade-up"
+        >
             <h2>Stay informed</h2>
             <div class="stayinformed__items row">
                 <div class="col-12 col-xl-6">
@@ -694,7 +757,10 @@
     <!-- Footer -->
     <section class="footer">
         <div class="footer__content">
-            <div class="footer__brand">
+            <div
+                class="footer__brand"
+                data-aos="fade-up"
+            >
                 <ul class="brand-footer__list">
                     <li><a href="#">
                             <img
@@ -717,7 +783,10 @@
                         </a></li>
                 </ul>
             </div>
-            <div class="footer__description">
+            <div
+                class="footer__description"
+                data-aos="fade-up"
+            >
                 <p>This is the International website of Mercedes-Benz AG. Visitors from the U.S., please visit our U.S.
                     website <a href="#">www.mbusa.com.</a></p>
             </div>
@@ -746,7 +815,7 @@
                                 <li><a href="#">Legal</a></li>
                                 <li><a href="#">Cookies</a></li>
                                 <li><a href="#">Privacy Statement</a></li>
-                                
+
                             </ul>
                         </div>
                         <div class="footer__navigation">
@@ -790,6 +859,28 @@
             </ul>
         </div>
     </section>
+    <div class="categories__content-mobi ">
+        <ul class="categories__list ">
+            <li class="categories__items"><a href="#">
+                    <span class="text"><i class="fas fa-car icon"></i>Product Page</span>
+                </a></li>
+            <li class="categories__items"><a href="#">
+
+                    <span class="text"><i class="fas fa-tools icon"></i>Configurator</span>
+                </a></li>
+            <li class="categories__items categories__items-share">
+                <span><i class="fas fa-share-alt icon"></i>Share</span>
+                <div class="link">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></i></a>
+                    <a href="#"><i class="fab fa-viber"></i></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
     <!-- Jquery -->
     <script
         src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
@@ -801,10 +892,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <!-- OWL Carousel JS -->
     <script src="./js/owl.carousel.min.js"></script>
+    <!-- Animation on Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Initial AOS -->
+    <script>
+        AOS.init();
+    </script>
     <!-- Banner -->
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,
+            autoplay: true,
             margin: 10,
             responsiveClass: true,
             dots: false,
@@ -821,6 +919,17 @@
                     items: 1,
                     nav: true,
                 }
+            }
+        })
+    </script>
+    <!-- Share Actived -->
+    <script>
+        $('.categories__items-share').click(function () {
+            if ($(this).hasClass('categories__items-share actived')) {
+                $(this).removeClass("actived");
+            }
+            else {
+                $(this).addClass('actived');
             }
         })
     </script>

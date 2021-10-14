@@ -73,6 +73,7 @@
         .show-more__btn{
             position: absolute;
             left: 50%;
+            transform: translateX(-50%);
             margin-top: $mg-3;
             padding: $pd-0 $pd-1;
             background: linear-gradient($color-gray-1,$color-gray-2);
@@ -81,6 +82,33 @@
             transition: all .3s;
             &:hover{
                 color: $color-white-1
+            }
+        }
+    }
+}
+@media screen and (max-width:1279.98px) {
+    .new-and-video{
+        .new-and-video__item{
+            .new-and-video__list{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .w-50-items{
+                grid-column: unset;
+                grid-row: unset;
+            }
+        }
+    }
+}
+@media screen and (max-width:767.98px) {
+    .new-and-video{
+        .new-and-video__item{
+            .new-and-video__list{
+                grid-template-columns: repeat(1,1fr);
+                .items{
+                    .overlay{
+                        background-color: $color-black;
+                    }
+                }
             }
         }
     }

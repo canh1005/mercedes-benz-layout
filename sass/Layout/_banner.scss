@@ -1,7 +1,7 @@
 .banner{
     margin-top: 110px;
     .banner__item{
-        height: 600px;
+        height: 100%;
         width: 100%;
         position: relative;
         .banner__container{
@@ -13,6 +13,7 @@
                 margin-bottom: $mg-5;
             }
             .banner__description{
+                display: inline-block;
                 @include Text($color-white,$fs-0,unset);
                 border: 1px solid #1f1f1f;
                 background-color: $color-gray-3;
@@ -27,22 +28,23 @@
             @include Text($color-white,$fs-2,unset);
         }
     }
-    .b0{
-        @include BannerBG(url('./../../img/Banner/01-mercedes-benz-iaa-mobility-2021-3400x1440.jpeg'))
-    }
-    .b1{
-        @include BannerBG(url('./../../img/Banner/01-mercedes-eq-eqb-2021-x243-3400x1440.jpeg'))
-    }
-    .b2{
-        @include BannerBG(url('./../../img/Banner/eqg-3400x1440.jpeg'))
-    }
-    .b3{
-        @include BannerBG(url('./../../img/Banner/maybach-3400x1440.jpeg'))
-    }
-    .b4{
-        @include BannerBG(url('./../../img/Banner/mercedes-benz-eqs-v297-homepage-3400x1440-03-2021.jpeg'))
-    }
-    .b5{
-        @include BannerBG(url('./../../img/Banner/mercedes-benz-the-all-electric-eqe-2021-v295-3400x1440.jpeg'))
+}
+@media screen and (max-width:767.98px) {
+    .banner{
+        .banner__item{
+            .banner__container{
+                position: static;
+                padding: $pd-3;
+                h3{
+                    @include Text($color-black,2rem,unset);
+                }
+            }
+            .banner__detail{
+                color: $color-black;
+                position: static;
+                padding: $pd-3;
+                width: initial;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@
             padding: 0;
         }
         .categories__items{
-            background-color: $color-black;
+            background-color: $color-black-1;
             margin: $mg-0 - 3 0;
             transition: all .5s;
             &:hover{
@@ -28,6 +28,66 @@
                 @include Text($color-white,$fs-5,900);
                 i{
                     padding: 0 $pd-1;
+                }
+            }
+        }
+    }
+}
+.categories__content-mobi{
+    display: none;
+}
+@media screen and (max-width:767.98px) {
+    .categories{
+        display: none;
+    }
+    .categories__content-mobi{
+        display: block;
+        background-color: $color-black;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        z-index: 101;
+        .categories__list{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            .categories__items{
+                flex: 1;
+                margin:0 $pd-0 - 3;
+                span{
+                    background-color: $color-black-1;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: $pd-1 0;
+                    @include Text($color-white,$fs-1,unset);
+                    i{
+                        font-size: $fs-5;
+                    }
+                }
+                .link{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    bottom: 60px;
+                    background-color: $color-black-1;
+                    text-align: center;
+                    overflow: hidden;
+                    margin-bottom: $pd-0 - 2;
+                    width: calc(33% - 3px);
+                    max-height: 0;
+                    transition: all .5s;
+                    a{
+                        @include Text($color-white,$fs-5,unset);
+                        margin: $mg-1 0;
+                    }
+                }
+                
+            }
+            .categories__items-share.actived{
+                .link{
+                    max-height: 404px;
                 }
             }
         }

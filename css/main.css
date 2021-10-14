@@ -27,6 +27,12 @@
   margin: 0 !important;
 }
 
+@media screen and (max-width: 767.98px) {
+  .owl-prev, .owl-next {
+    top: 10%;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -47,12 +53,13 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 200;
 }
 
 .header__content {
   position: relative;
   padding: 15px;
+  align-items: flex-end !important;
 }
 
 .header__content a {
@@ -96,6 +103,10 @@
   font-size: 10px;
 }
 
+.header__content .search-mobi {
+  display: none;
+}
+
 .header__content .header__main {
   position: absolute;
   bottom: 17px;
@@ -114,18 +125,39 @@
   color: #fff;
 }
 
+.header__content .header__main .text__search-mobi {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .header__content .header__main {
     position: static;
+    height: calc(100vh - 90px);
+  }
+  .header__content .header__main .text__search-mobi {
+    display: inline-block;
+    color: #fff;
+  }
+  .header__content .search-mobi {
+    display: inline-block;
   }
   .header__content .brand__text {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 767.98px) {
+  .header__content .header__main {
+    height: calc(100vh - 80px);
+  }
+  .header__content .header__main .nav-link {
+    padding: 0;
+  }
+  .header__content .icon {
+    margin-right: 0 !important;
+  }
   .header__content .icon .fa-info {
-    font-size: 24px !important;
+    font-size: 8px !important;
     padding: 5px 10px !important;
   }
   .header__content .icon .icon-text {
@@ -135,7 +167,7 @@
     padding-top: 5%;
   }
   .header__content .header__meta .lang-link {
-    font-size: 24px;
+    font-size: 1rem;
   }
 }
 
@@ -144,7 +176,7 @@
 }
 
 .banner .banner__item {
-  height: 600px;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -163,6 +195,7 @@
 }
 
 .banner .banner__item .banner__container .banner__description {
+  display: inline-block;
   color: #fff;
   font-size: 16px;
   font-weight: unset;
@@ -181,46 +214,22 @@
   font-weight: unset;
 }
 
-.banner .b0 {
-  background-image: url("./../../img/Banner/01-mercedes-benz-iaa-mobility-2021-3400x1440.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner .b1 {
-  background-image: url("./../../img/Banner/01-mercedes-eq-eqb-2021-x243-3400x1440.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner .b2 {
-  background-image: url("./../../img/Banner/eqg-3400x1440.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner .b3 {
-  background-image: url("./../../img/Banner/maybach-3400x1440.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner .b4 {
-  background-image: url("./../../img/Banner/mercedes-benz-eqs-v297-homepage-3400x1440-03-2021.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner .b5 {
-  background-image: url("./../../img/Banner/mercedes-benz-the-all-electric-eqe-2021-v295-3400x1440.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media screen and (max-width: 767.98px) {
+  .banner .banner__item .banner__container {
+    position: static;
+    padding: 20px;
+  }
+  .banner .banner__item .banner__container h3 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: unset;
+  }
+  .banner .banner__item .banner__detail {
+    color: #000;
+    position: static;
+    padding: 20px;
+    width: initial;
+  }
 }
 
 .search__box {
@@ -415,6 +424,7 @@
 .new-and-video .new-and-video__item .show-more__btn {
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   margin-top: 20px;
   padding: 5px 10px;
   background: linear-gradient(#202020, #303030);
@@ -427,6 +437,25 @@
 
 .new-and-video .new-and-video__item .show-more__btn:hover {
   color: #f0f0f0;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .new-and-video .new-and-video__item .new-and-video__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .new-and-video .new-and-video__item .w-50-items {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .new-and-video .new-and-video__item .new-and-video__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .new-and-video .new-and-video__item .new-and-video__list .items .overlay {
+    background-color: #000;
+  }
 }
 
 .footnotes {
@@ -525,7 +554,7 @@
 
 .footer {
   background-color: #000;
-  padding-top: 35px;
+  padding: 35px 0;
 }
 
 .footer .footer__content {
@@ -613,6 +642,10 @@
 }
 
 .footer .footer__outer .meta-footer {
+  display: flex;
+}
+
+.footer .footer__outer .meta-footer .meta-footer__list {
   display: flex;
 }
 
@@ -725,7 +758,7 @@
 }
 
 .categories .categories__content .categories__items {
-  background-color: #000;
+  background-color: #1f1f1f;
   margin: 2px 0;
   transition: all .5s;
 }
@@ -755,5 +788,68 @@
 
 .categories .categories__content .categories__items .link i {
   padding: 0 10px;
+}
+
+.categories__content-mobi {
+  display: none;
+}
+
+@media screen and (max-width: 767.98px) {
+  .categories {
+    display: none;
+  }
+  .categories__content-mobi {
+    display: block;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 101;
+  }
+  .categories__content-mobi .categories__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  .categories__content-mobi .categories__list .categories__items {
+    flex: 1;
+    margin: 0 2px;
+  }
+  .categories__content-mobi .categories__list .categories__items span {
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: unset;
+  }
+  .categories__content-mobi .categories__list .categories__items span i {
+    font-size: 24px;
+  }
+  .categories__content-mobi .categories__list .categories__items .link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 60px;
+    background-color: #1f1f1f;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 3px;
+    width: calc(33% - 3px);
+    max-height: 0;
+    transition: all .5s;
+  }
+  .categories__content-mobi .categories__list .categories__items .link a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: unset;
+    margin: 10px 0;
+  }
+  .categories__content-mobi .categories__list .categories__items-share.actived .link {
+    max-height: 404px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

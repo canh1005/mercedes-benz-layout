@@ -1,6 +1,7 @@
 .footnotes{
     background-color: $color-black;
     padding-top: $pd-4;
+    clear: both;
     .footnotes__content{
         @include Text($color-white,$fs-2,unset);
         padding: $pd-3;

@@ -219,6 +219,9 @@
 }
 
 @media screen and (max-width: 767.98px) {
+  .banner .banner__item {
+    background-color: #fff;
+  }
   .banner .banner__item .banner__container {
     position: static;
     padding: 20px;
